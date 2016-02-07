@@ -5,7 +5,7 @@
 ## Login   <bougon_p@epitech.net>
 ##
 ## Started on  Mon Jan  4 19:12:16 2016 bougon_p
-## Last update Wed Jan 27 07:00:41 2016 bougon_p
+## Last update Sun Feb  7 23:38:31 2016 bougon_p
 ##
 
 TOOLS	=	src/tools/
@@ -102,11 +102,11 @@ WHITE	=	\033[0m
 
 MAKE 	= 	make
 
-$(NAME)	: $(OBJS)
+$(NAME)	: 	$(OBJS)
 		@$(CC) -o $(NAME) $(OBJS) $(LIB) $(LDFLAGS) $(IFLAG)
 		@echo "$(GREEN)\n> Compiling sources\t : \t DONE\n$(WHITE)"
 
-$(CPLIB) : $(MAKE) -C lib/my/
+$(CPLIB) : 	$(MAKE) -C lib/my/
 
 all	:	$(CPLIB) $(NAME)
 
@@ -115,7 +115,7 @@ clean	:
 		@echo "$(GREEN)\n> Cleaning repository\t : \t DONE\n$(WHITE)"
 
 fclean	: 	clean
-		$(MAKE) fclean -C lib/my/
+		@$(MAKE) fclean -C lib/my/
 		@$(RM) $(NAME)
 		@echo "$(GREEN)\n> Cleaning exec\t\t : \t DONE\n$(WHITE)"
 

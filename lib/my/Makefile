@@ -5,7 +5,7 @@
 ## Login   <theis_p@epitech.net>
 ##
 ## Started on  Fri Oct  9 09:30:41 2015 Paul THEIS
-## Last update Wed Jan 27 06:45:27 2016 bougon_p
+## Last update Sun Feb  7 23:41:37 2016 bougon_p
 ##
 
 SRCS	=	my_find_prime_sup.c			\
@@ -90,19 +90,17 @@ RM	= rm -f
 
 AR	= ar
 
-##all:	$(NAME)
+$(NAME)	:	$(OBJS)
+		@$(AR) rc $(NAME) $(OBJS)
+		@$(CP) $(HEADER) $(NEW_H)
+		@$(CP) $(NAME) $(NEW_N)
 
-$(NAME): $(OBJS)
-	@$(AR) rc $(NAME) $(OBJS)
-	@$(CP) $(HEADER) $(NEW_H)
-	@$(CP) $(NAME) $(NEW_N)
+all	:	$(NAME)
 
-all:	$(NAME)
+clean	:
+		@$(RM) $(OBJS)
 
-clean:
-	@$(RM) $(OBJS)
+fclean	: 	clean
+		@$(RM) $(NAME) $(NEW_N) $(NEW_H)
 
-fclean: clean
-	@$(RM) $(NAME) $(NEW_N) $(NEW_H)
-
-re: fclean all
+re	: 	fclean all
