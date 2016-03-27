@@ -5,7 +5,7 @@
 ## Login   <bougon_p@epitech.net>
 ##
 ## Started on  Mon Jan  4 19:12:16 2016 bougon_p
-## Last update Sun Feb  7 23:38:31 2016 bougon_p
+## Last update Sun Mar 27 22:31:15 2016 bougon_p
 ##
 
 TOOLS	=	src/tools/
@@ -104,7 +104,7 @@ MAKE 	= 	make
 
 $(NAME)	: 	$(OBJS)
 		@$(CC) -o $(NAME) $(OBJS) $(LIB) $(LDFLAGS) $(IFLAG)
-		@echo "$(GREEN)\n> Compiling sources\t : \t DONE\n$(WHITE)"
+		@echo -e "$(GREEN)\n> Compiling sources\t : \t DONE\n$(WHITE)"
 
 $(CPLIB) : 	$(MAKE) -C lib/my/
 
@@ -112,15 +112,15 @@ all	:	$(CPLIB) $(NAME)
 
 clean	:
 		@$(RM) $(OBJS)
-		@echo "$(GREEN)\n> Cleaning repository\t : \t DONE\n$(WHITE)"
+		@echo -e "$(GREEN)\n> Cleaning repository\t : \t DONE\n$(WHITE)"
 
 fclean	: 	clean
-		@$(MAKE) fclean -C lib/my/
+		$(MAKE) fclean -C lib/my/
 		@$(RM) $(NAME)
-		@echo "$(GREEN)\n> Cleaning exec\t\t : \t DONE\n$(WHITE)"
+		@echo -e "$(GREEN)\n> Cleaning exec\t\t : \t DONE\n$(WHITE)"
 
 re	:	fclean all
 
 .c.o	:
 		@gcc $(IFLAG) -c $< -o $@ $(FLAG) $(CFLAGS)
-		@echo "$(GREEN)> $<\t : \t [OK]$(WHITE)"
+		@echo -e "$(GREEN)[OK] > $<$(WHITE)"

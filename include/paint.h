@@ -5,7 +5,7 @@
 ** Login   <theis_p@epitech.eu>
 **
 ** Started on  Mon Jan  4 19:15:49 2016 bougon_p
-** Last update Wed Jan 27 06:02:57 2016 Tristan goubeau
+** Last update Tue Feb 16 21:43:52 2016 bougon_p
 */
 
 #ifndef PAINT_H_
@@ -15,10 +15,12 @@
 # include <stdio.h>
 # include <math.h>
 # include <string.h>
+
 # include "rec.h"
 # include "struct.h"
 # include "lapin.h"
 # include "list.h"
+
 
 # define PAINT_WIDTH 1280
 # define PAINT_HEIGHT 720

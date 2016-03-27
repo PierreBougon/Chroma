@@ -5,7 +5,7 @@
 ** Login   <bougon_p@epitech.net>
 **
 ** Started on  Wed Jan 20 22:44:39 2016 bougon_p
-** Last update Wed Jan 27 08:01:35 2016 bougon_p
+** Last update Tue Feb 16 21:50:18 2016 bougon_p
 */
 
 #include "paint.h"
@@ -64,12 +64,12 @@ void	check_action_button(void *buttone, t_data *data)
 	    create_img_area(data);
 	  button->active = 0;
 	}
-      else if (my_strcmp(button->link, "save") == 0)
-	{
-	  if (data->sup->pixarray != NULL)
-	    bunny_save_pixelarray(data->sup->pixarray, "save.png");
-	  button->active = 0;
-	}
+      /* else if (my_strcmp(button->link, "save") == 0) */
+      /* 	{ */
+      /* 	  if (data->sup->pixarray != NULL) */
+      /* 	    bunny_save_pixelarray(data->sup->pixarray, "save.png"); */
+      /* 	  button->active = 0; */
+      /* 	} */
       else if (my_strcmp(button->link, "calque") == 0)
 	{
 	  addcalc(data, "-new-");
